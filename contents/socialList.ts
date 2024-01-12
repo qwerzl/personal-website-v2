@@ -1,4 +1,4 @@
-export const socialLists = [
+export const socialList = [
   {
     text: 'Github',
     link: 'https://github.com/qwerzl',
