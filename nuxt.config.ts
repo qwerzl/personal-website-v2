@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@vueuse/nuxt',
     'nuxt-icon',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    "@nuxt/image"
   ],
   shadcn: {
     /**
@@ -21,6 +22,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Inter: '200..700',
+      'IBM Plex Mono': '200..700',
     }
   }
 })

@@ -2,11 +2,12 @@ const animate = require("tailwindcss-animate")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  // darkMode: ["class"],
 
   theme: {
     fontFamily: {
       'sans': ["Inter", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+      'mono': ["IBM Plex Mono", 'ui-monospace', 'SFMono-Regular', "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
     },
     container: {
       center: true,

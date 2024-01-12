@@ -20,25 +20,28 @@ const props = defineProps({
 })
 
 const hovered = ref(false)
+
+const openLink = (url: string) => {
+  window.open(url, '_blank')
+}
 </script>
 
 <template>
   <div
-      class="px-4 py-3 rounded-md transition-colors decoration-none border hover:bg-grey-100 hover:bg-opacity-10"
+      class="px-4 py-3 rounded-md transition-colors decoration-none border dark:border-neutral-800 border-neutral-300"
       @mouseover="hovered = true"
       @mouseleave="hovered = false"
-      :href="href"
-      target="_blank"
+      @click="openLink(href)"
   >
     <div class="flex h-full items-center justify-center text-white">
       <div class="mr-4 text-4xl">
         <Icon :name="icon" />
       </div>
       <div class="flex-1">
-        <div class="font-medium leading-relaxed">{{ name }}</div>
-        <div class="op-50 font-mono text-sm">{{ desc }}</div>
+        <div class="font-medium leading-relaxed text-foreground">{{ name }}</div>
+        <div class="op-50 text-sm text-secondary-foreground">{{ desc }}</div>
       </div>
-      <Icon v-if="hovered" name="system-uicons:arrow-top-right" class="h-4 w-4 transition"/>
+      <Icon v-if="hovered" name="system-uicons:arrow-top-right" class="h-4 w-4 transition mr-2 text-secondary-foreground"/>
     </div>
   </div>
 </template>

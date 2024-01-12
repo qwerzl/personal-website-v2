@@ -7,7 +7,7 @@ export const defaultProjectList = [
   }, {
     name: 'Enspire',
     desc: 'Make CAS Great Again at SWFLA!',
-    link: 'https://github.com/moegi-design/ghost-theme-Moegi',
+    link: 'https://github.com/computerization/enspire',
     icon: 'i-fluent-emoji-flat-unicorn',
   },
 ]

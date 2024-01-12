@@ -26,7 +26,7 @@ const props = defineProps({
   <a
       :class="
         cn(
-          'inline-flex px-3 py-2 mt-2 mr-2 rounded-md transition-colors decoration-none hover:text-white bg-gray-50/10',
+          'inline-flex px-3 py-2 mt-2 mr-2 rounded-md transition-colors decoration-none hover:text-white dark:bg-gray-50/10 bg-black text-white',
           props.class
         )
       "

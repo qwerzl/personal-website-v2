@@ -5,6 +5,7 @@ import {defaultProjectList} from '@/contents/projectList'
 import {extendedProjectList} from "@/contents/projectList";
 
 const isOpen = ref(false)
+const isShow = ref(false)
 </script>
 
 <template>
@@ -13,11 +14,11 @@ const isOpen = ref(false)
       class="mt-10"
   >
     <div class="flex items-center justify-between">
-      <h4 class="text-3xl font-semibold tracking-tight transition-colors first:mt-0 hover:no-underline border-b">
+      <h4 class="text-3xl font-semibold tracking-tight transition-colors first:mt-0 hover:no-underline border-b border-b-current">
         Projects
       </h4>
       <CollapsibleTrigger as-child>
-        <Icon name="system-uicons:chevron-close" class="h-6 w-6"/>
+        <Icon @click="isShow = !isShow" name="system-uicons:chevron-down-circle" class="h-6 w-6 rounded-full toggleUpDown" :class='{ "rotate": isShow }'/>
       </CollapsibleTrigger>
     </div>
 
@@ -44,5 +45,11 @@ const isOpen = ref(false)
 </template>
 
 <style scoped>
+.toggleUpDown {
+  transition: transform .3s ease-in-out !important;
+}
 
+.toggleUpDown.rotate {
+  transform: rotate(180deg);
+}
 </style>
