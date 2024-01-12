@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { SocialButton } from "@/components/custom/social-button";
 import { Button } from '@/components/ui/button'
 import { socialLists } from "@/contents/socialLists";
-
+import { openLink } from "~/lib/utils";
 </script>
 
 <template>
@@ -10,14 +9,14 @@ import { socialLists } from "@/contents/socialLists";
 
     <Button
         v-for="social in socialLists"
-        class="mr-2 dark:bg-gray-50/10 text-foreground bg-gray-500/10 shadow-none"
+        class="mr-2 dark:bg-gray-50/10 dark:hover:bg-gray-50/30 text-foreground bg-gray-500/10 hover:bg-gray-500/30 shadow-none"
         :text="social.text"
         :href="social.link"
         :icon="social.icon"
+        @click="openLink(social.link)"
     >
         <Icon :name="social.icon" />
         <div class="ml-1" v-if="social.text">{{ social.text }}</div>
-
     </Button>
   </div>
 

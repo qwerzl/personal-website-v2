@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { openLink } from "~/lib/utils";
+
 const props = defineProps({
   href: {
     type: String,
@@ -20,10 +22,6 @@ const props = defineProps({
 })
 
 const hovered = ref(false)
-
-const openLink = (url: string) => {
-  window.open(url, '_blank')
-}
 </script>
 
 <template>
