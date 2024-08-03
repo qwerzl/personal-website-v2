@@ -1,14 +1,21 @@
 export const defaultProjectList = [
   {
-    name: 'Docusaurus',
-    desc: 'Currently investigating.',
-    link: 'https://github.com/facebook/docusaurus',
-    icon: 'i-fluent-emoji-flat-t-rex',
-  }, {
     name: 'Enspire',
     desc: 'Make CAS Great Again at SWFLA!',
     link: 'https://github.com/computerization/enspire',
     icon: 'i-fluent-emoji-flat-unicorn',
+  },
+  {
+    name: 'Nuxt Fonts',
+    desc: 'Custom Web Fonts for Nuxt Applications',
+    link: 'https://github.com/nuxt/fonts',
+    icon: 'i-fluent-emoji-flat-input-latin-letters',
+  },
+  {
+    name: 'Docusaurus',
+    desc: 'Contributed a few commits',
+    link: 'https://github.com/facebook/docusaurus',
+    icon: 'i-fluent-emoji-flat-t-rex',
   },
 ]
 
