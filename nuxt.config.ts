@@ -4,10 +4,11 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'shadcn-nuxt',
     '@vueuse/nuxt',
-    'nuxt-icon',
+    '@nuxt/icon',
     '@nuxtjs/google-fonts',
     "@nuxt/image"
   ],
+
   shadcn: {
     /**
      * Prefix for all the imported component
@@ -19,10 +20,13 @@ export default defineNuxtConfig({
      */
     componentDir: './components/ui'
   },
+
   googleFonts: {
     families: {
       Inter: '200..700',
       'IBM Plex Mono': '200..700',
     }
-  }
+  },
+
+  compatibilityDate: '2024-08-04'
 })
