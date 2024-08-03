@@ -39,7 +39,8 @@ const hovered = ref(false)
         <div class="font-medium leading-relaxed text-foreground">{{ name }}</div>
         <div class="op-50 text-sm text-secondary-foreground">{{ desc }}</div>
       </div>
-      <Icon v-if="hovered" name="system-uicons:arrow-top-right" class="h-4 w-4 transition mr-2 text-secondary-foreground"/>
+      <div v-if="!hovered" class="h-4 w-4 transition mr-2 text-secondary-foreground"/>
+      <Icon v-else name="system-uicons:arrow-top-right" class="h-4 w-4 transition mr-2 text-secondary-foreground"/>
     </div>
   </div>
 </template>
